@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C.A.H.C.E.T – OD Form QR Code</title>
+<style>
+  body{background:#0a0a0a;color:#eee;font-family:sans-serif;text-align:center;padding:50px;}
+  h1{color:#00b894;}
+  #qrcode{margin-top:30px;}
+  p{color:#aaa;margin-top:20px;font-size:16px;}
+</style>
+</head>
+<body>
+<h1>C.A.H.C.E.T – Scan to Apply for OD</h1>
+<div id="qrcode"></div>
+<p>Scan this QR code with your mobile to open the OD Form.</p>
+
+<!-- QR Code library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  // Replace this with your OD form URL (index.html hosted online or local server)
+  var odFormURL = 'https://github.com/Mohammedazhadh/OD_FORM.github.io/index1.html';
+
+  var qrcode = new QRCode(document.getElementById("qrcode"), {
+    text: odFormURL,
+    width: 250,
+    height: 250,
+    colorDark : "#00b894",
+    colorLight : "#0a0a0a",
+    correctLevel : QRCode.CorrectLevel.H
+  });
+</script>
+</body>
+</html>
